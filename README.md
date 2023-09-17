@@ -22,7 +22,6 @@ The script interprets your BMI value into the following categories:
 - BMI >= 40: Obesity Class III (Very Severe)
 
 ## Example
-    ```shell
     python bmi_calculator.py
     Enter your weight (in kilograms): 70
     Enter your height (in centimeters): 175
