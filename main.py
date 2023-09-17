@@ -1,6 +1,9 @@
-def oblicz_bmi(masa, wzrost):
+def oblicz_bmi(masa, wzrost_cm):
+    # Przeliczamy wzrost z centymetrów na metry
+    wzrost_m = wzrost_cm / 100
+    
     # Obliczamy BMI jako masa / (wzrost w metrach)^2
-    bmi = masa / (wzrost ** 2)
+    bmi = masa / (wzrost_m ** 2)
     return bmi
 
 def interpretuj_bmi(bmi):
@@ -23,10 +26,10 @@ def interpretuj_bmi(bmi):
 
 # Pobieramy dane od użytkownika
 masa = float(input("Podaj swoją masę ciała (w kilogramach): "))
-wzrost = float(input("Podaj swój wzrost (w metrach): "))
+wzrost_cm = float(input("Podaj swój wzrost (w centymetrach): "))
 
 # Obliczamy BMI
-bmi = oblicz_bmi(masa, wzrost)
+bmi = oblicz_bmi(masa, wzrost_cm)
 
 # Interpretujemy wynik
 interpretacja = interpretuj_bmi(bmi)
